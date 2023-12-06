@@ -293,7 +293,7 @@ ol {
   border: none;
 }
 
- .content__video-card:hover .content__video-card-title {
+.content__video-card:hover .content__video-card-title {
   text-decoration: underline;
  }
 
