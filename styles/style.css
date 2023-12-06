@@ -41,12 +41,13 @@ ol {
 .content {
   display: flex;
   justify-content: center;
+  height: 100%;
   /* display: grid;
   grid-template-columns: auto 1fr;
   place-content: end center; */
   inline-size: 1140px;
   gap: 30px;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .result__video-container {
