@@ -30,9 +30,297 @@ blockquote,
 fieldset {
   margin: 0;
   padding: 0;
+  border: none;
 }
 
 ul,
 ol {
   list-style: none;
 }
+
+.content {
+  display: flex;
+  justify-content: center;
+  /* display: grid;
+  grid-template-columns: auto 1fr;
+  place-content: end center; */
+  inline-size: 1140px;
+  gap: 30px;
+  align-items: flex-end;
+}
+
+.result__video-container {
+  width: 711px;
+  padding-bottom: 16px;
+  object-fit: cover;
+}
+
+.result__video {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* .content__details {
+  max-width: 399px;
+} */
+
+.content__video-card-thumbnail {
+  max-width: 100%;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  /* display: grid;
+  grid-template-columns: 2fr 1fr 1fr; */
+  align-items: flex-end;
+}
+
+.content__list {
+  height: 298px;
+  overflow-y: scroll;
+}
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  max-height: 100%;
+  gap: 28px;
+}
+
+.content__list-item {
+  margin-top: 30px;
+}
+
+.content__list-item:first-child {
+  margin-top: 0px;
+}
+
+.content__video-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr;
+  align-items: end;
+}
+
+.content__video-card-description-container {
+  align-self: start;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  /* object-fit: contain; */
+}
+
+.result__video-container {
+  position: relative;
+}
+
+.content__list {
+  position: relative;
+}
+
+.search-form__label {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px;
+  width: fit-content;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.search-form__label:has(:focus-visible) {
+  border: 1px solid #FFF;
+}
+
+.search-form__fieldset-title {
+  color: #FFF;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.search-form__textfield {
+  color: rgba(255, 255, 255, 0.70);
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  min-width: 225px;
+  background-color: transparent;
+  border: none;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  appearance: none;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__textfield:active {
+  border: none;
+  outline: none;
+}
+
+.content__accent {
+  color: #545050;
+  font-family: Oswald;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 94%; /* 70.5px */
+  text-transform: uppercase;
+}
+
+.title {
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 183px;
+  gap: 6px;
+}
+
+.content__card-link {
+  display: block;
+  text-decoration: none;
+  color:#FFF;
+}
+
+.content__card-link_current {
+  background: #545050;
+}
+
+.content__video-card-title {
+  font-family: Oswald;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 100%; /* 30px */
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px; /* 90% */
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* У меня чекбоксы и так выстроились в линию */
+
+.search-form__checkbox-list {
+
+}
+
+/* .search-form__label {
+  display: flex;
+  flex-direction: row;
+} */
+
+/* .search-form__label-text {
+  position: relative;
+} */
+
+.search-form__pseudo-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* cursor: pointer; */
+}
+
+.search-form__checkbox + .search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+  border: 1px solid #FFF;
+  background-color: transparent;
+}
+
+.search-form__pseudo-checkbox::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+  display: block;
+  background-color: #FFF;
+  /* outline: 1px solid transparent; */
+}
+
+.button {
+  color: #FFF;
+  text-align: center;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  background-color: transparent;
+  border: 1px solid #FFF;
+  cursor: pointer;
+}
+
+.button:focus {
+  appearance: none;
+}
+
+.button:hover {
+  text-decoration-line: underline;
+}
+
+.button:active {
+  background: #545050;
+  text-decoration: none;
+}
+
+.button:focus-visible {
+  /* border: 1px solid #FFF; */
+  outline: 1px solid #FFF;
+  outline-offset: 1px;
+}
+
+.search-form__submit-button {
+  min-width: 194px;
+}
+
+.more-button {
+  min-width: 399px;
+  margin-top: 30px;
+}
+
+.search-form__label:hover .search-form__label-text {
+  /* text-decoration-line: underline; */
+  border-bottom: 1px solid #FFF;
+}
+
+.search-form__label:active .search-form__label-text {
+  border-bottom: none;
+  border: none;
+}
+
+/* .search-form__label:focus {
+  border: 1px solid #FFF;
+} */
+
+/* .search-form__pseudo-checkbox::before:focus {
+  border: 1px solid #FFF;
+} */
