@@ -13,6 +13,7 @@ html {
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
+  padding: 0 30px;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
@@ -55,14 +56,15 @@ ol {
   align-items: end;
 }
 
+.result {
+  margin-bottom: 8px;
+}
+
 .result__video-container {
   width: 711px;
   height: 386px;
   margin-bottom: 16px;
   object-fit: cover;
-}
-
-.result__video-container {
   position: relative;
 }
 
@@ -83,18 +85,20 @@ ol {
   flex-direction: column;
   max-width: 100%;
   max-height: 100%;
-  gap: 28px;
+  gap: 18px;
+  margin-bottom: 8px;
 }
 
 .content__list {
   position: relative;
   height: 298px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .content__video-card-thumbnail {
   max-width: 100%;
   width: 194px;
+  object-fit: cover;
 }
 
 .content__list-item {
@@ -114,6 +118,7 @@ ol {
 
 .content__video-card-description-container {
   align-self: start;
+  flex-grow: 1;
 }
 
 .search-form__label {
@@ -129,6 +134,11 @@ ol {
   border: 1px solid #FFF;
 }
 
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 .search-form__fieldset-title {
   color: #FFF;
   font-family: Fira Sans Condensed, sans-serif;
@@ -161,21 +171,21 @@ ol {
   outline: none;
 }
 
-.content__accent {
-  color: #545050;
-  font-family: Oswald;
+.title {
+  color: #FFF;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
-  line-height: 94%;
+  line-height: 0.94;
   text-transform: uppercase;
 }
 
-.title {
-  color: #FFF;
-  font-family: Oswald;
+.content__accent {
+  color: #545050;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
-  line-height: 94%;
+  line-height: 0.94;
   text-transform: uppercase;
 }
 
@@ -197,11 +207,12 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: 700;
-  line-height: 100%; 
+  line-height: 1.0; 
   text-transform: uppercase;
+  margin-top: 7px;
 }
 
 .content__video-card-description {
@@ -225,6 +236,11 @@ ol {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 13px;
 }
 
 .search-form__checkbox + .search-form__pseudo-checkbox {
@@ -277,10 +293,12 @@ ol {
 
 .search-form__submit-button {
   min-width: 194px;
+  min-height: 34px;
 }
 
 .more-button {
   min-width: 399px;
+  min-height: 34px;
   margin-top: 30px;
 }
 
