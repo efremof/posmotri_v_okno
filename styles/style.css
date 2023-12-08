@@ -87,6 +87,7 @@ ol {
   max-height: 100%;
   gap: 18px;
   margin-bottom: 8px;
+  min-width: 399px;
 }
 
 .content__list {
